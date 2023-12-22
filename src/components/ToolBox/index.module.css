@@ -1,0 +1,19 @@
+.toolboxContainer{
+    @apply p-5 absolute top-1/4 left-5 w-64 rounded-md border border-gray-300 shadow-lg;
+
+    .toolItem {
+        @apply mb-5;
+
+        .toolText {
+            @apply text-[11px] text-gray-800;
+        }
+
+        .itemContainer{
+            @apply flex justify-between mt-2;
+
+            .colorBox{
+                @apply h-5 w-5 mr-1 rounded-sm cursor-pointer hover:border-[2px] border-blue-800;
+            }
+        }
+    }
+}

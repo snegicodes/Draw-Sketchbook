@@ -1,0 +1,38 @@
+import styles from "./index.module.css";
+
+const ToolBox = () => {
+  return (
+    <div className={styles.toolboxContainer}>
+      <div className={styles.toolItem}>
+        <div className={styles.toolText}>Stroke Color</div>
+        <div className={styles.itemContainer}>
+          <div
+            className={styles.colorBox}
+            style={{ backgroundColor: "black" }}
+          />
+          <div className={styles.colorBox} style={{ backgroundColor: "red" }} />
+          <div
+            className={styles.colorBox}
+            style={{ backgroundColor: "orange" }}
+          />
+          <div
+            className={styles.colorBox}
+            style={{ backgroundColor: "green" }}
+          />
+          <div
+            className={styles.colorBox}
+            style={{ backgroundColor: "blue" }}
+          />
+        </div>
+      </div>
+      <div className={styles.toolItem}>
+        <div className={styles.toolText}>Brush Stroke</div>
+        <div className={styles.itemContainer}>
+          <input type="range" min={1} max={10} step={1} />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ToolBox;
