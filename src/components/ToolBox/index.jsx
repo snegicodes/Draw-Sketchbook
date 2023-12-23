@@ -1,6 +1,10 @@
+"use server";
+import { useSelector } from "react-redux";
 import styles from "./index.module.css";
 
 const ToolBox = () => {
+  const activeMenuItem = useSelector((state) => state.menu.activeMenuItem);
+
   return (
     <div className={styles.toolboxContainer}>
       <div className={styles.toolItem}>
@@ -26,7 +30,7 @@ const ToolBox = () => {
         </div>
       </div>
       <div className={styles.toolItem}>
-        <div className={styles.toolText}>Brush Stroke</div>
+        <div className={styles.toolText}>Brush Stroke {activeMenuItem}</div>
         <div className={styles.itemContainer}>
           <input type="range" min={1} max={10} step={1} />
         </div>
